@@ -1,0 +1,40 @@
+{
+  "name": "scripts-plus",
+  "version": "1.0.0",
+  "description": "Arbitrary build scripts helper.",
+  "main": "scripts-plus.js",
+  "scripts": {
+    "pretest": "jshint scripts-plus.js",
+    "test": "mocha test/all.js --testBool"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staydecent/scripts-plus.git"
+  },
+  "keywords": [
+    "tool",
+    "make",
+    "init",
+    "test",
+    "build",
+    "cli",
+    "task",
+    "script",
+    "runner"
+  ],
+  "author": "Adrian Unger (http://staydecent.ca)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/staydecent/scripts-plus/issues"
+  },
+  "homepage": "https://github.com/staydecent/scripts-plus#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "orchestrator": "^0.3.7",
+    "yargs": "^3.31.0"
+  }
+}

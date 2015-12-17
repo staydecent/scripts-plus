@@ -1,6 +1,6 @@
 {
   "name": "scripts-plus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Arbitrary build scripts helper.",
   "main": "scripts-plus.js",
   "scripts": {

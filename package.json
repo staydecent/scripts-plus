@@ -5,7 +5,9 @@
   "main": "scripts-plus.js",
   "scripts": {
     "pretest": "jshint scripts-plus.js",
-    "test": "mocha test/all.js --testBool"
+    "test": "mocha test/all.js --testBool",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",

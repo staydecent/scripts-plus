@@ -1,6 +1,8 @@
 # scripts-plus
 Arbitrary build scripts helper.
 
+[![bitHound Overall Score](https://www.bithound.io/github/staydecent/scripts-plus/badges/score.svg)](https://www.bithound.io/github/staydecent/scripts-plus) [![Build Status](https://travis-ci.org/staydecent/scripts-plus.svg)](https://travis-ci.org/staydecent/scripts-plus)
+
 ## Background
 
 I prefer using [npm scripts](https://docs.npmjs.com/misc/scripts), for defining build tasks, over Gulp, Grunt etc. as no packages need to be installed globally. As well, Gulp and Grunt require using specific wrappers around the tools I want to use. `jshint` is not good enough, I would also need to require `gulp-jshint`. 

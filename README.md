@@ -48,7 +48,7 @@ scripts.add('build', ['build-js']);
 scripts.add('build-js', ['lint'], function(done) {
   var args = ['src/index.js'];
   if (argv.minify) {
-    args.concat(['|', 'uglifyjs', '-c', '>', 'dist/bundle.js]);
+    args.concat(['|', 'uglifyjs', '-c', '>', 'dist/bundle.js']);
   } else {
     args.concat(['-o', 'dist/bundle.js']);
   }

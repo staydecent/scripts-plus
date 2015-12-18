@@ -2,16 +2,16 @@
 
 var spawn = require('child_process').spawn;
 var Orchestrator = require('orchestrator');
-var argv = require('yargs').argv;
 
 var tasks = new Orchestrator();
 
 module.exports = {
-  argv: argv,
-
   add: tasks.add,
-
   tasks: tasks.tasks,
+
+  argv: function() {
+    return require('yargs').argv;
+  },
 
   spawn: function(bin, args, done) {
     var cmd  = spawn(bin, args || []);
@@ -19,17 +19,14 @@ module.exports = {
     cmd.stdout.on('data', logBuffer);
     cmd.stderr.on('data', logBuffer);
 
-    cmd.on('exit', function(code) {
-      console.log('exit code: ' + code);
-
+    cmd.on('exit', function() {
       if (typeof done === 'function') {
         done();
       }
     });
   },
 
-  run: function() {
-    var argv = argv;
+  run: function(argv) {
     var task = argv._[0] || 'default';
 
     tasks.start(task, function(err) {

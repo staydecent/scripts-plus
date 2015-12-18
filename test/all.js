@@ -15,8 +15,9 @@ describe('scripts-plus', function () {
   });
 
   it('should expose argv', function () {
-    assert.deepEqual(scripts.argv._, ['test/all.js']);
-    assert.ok(scripts.argv.testBool);
+    var argv = scripts.argv();
+    assert.deepEqual(argv._, ['test/all.js']);
+    assert.ok(argv.testBool);
   });
 
   it('should add tasks to Orchestrator', function () {
